@@ -4,12 +4,17 @@ const TextInput = (props) => {
 
     const placeholder = `${props.placeholder}...` 
 
+    const onType = (event) => {
+        value = event.target.value
+        console.log(value)
+    }
+
     return (
         <div className="text-input">
             <label>
                 {props.label}
             </label>
-            <input placeholder={placeholder}/>
+            <input value={value} onChange={onType} required={props.required} placeholder={placeholder}/>
         </div>
     )
 }
