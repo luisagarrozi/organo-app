@@ -5,8 +5,7 @@ const TextInput = (props) => {
     const placeholder = `${props.placeholder}...` 
 
     const onType = (event) => {
-        value = event.target.value
-        console.log(value)
+        props.whenChanged(event.target.value)
     }
 
     return (
@@ -14,7 +13,7 @@ const TextInput = (props) => {
             <label>
                 {props.label}
             </label>
-            <input value={value} onChange={onType} required={props.required} placeholder={placeholder}/>
+            <input value={props.value} onChange={onType} required={props.required} placeholder={placeholder}/>
         </div>
     )
 }
