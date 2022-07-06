@@ -1,5 +1,6 @@
 import Banner from './components/Banner';
 import Form from './components/Form';
+import Team from './components/Team';
 
 function App() {
   const teams = [
@@ -43,7 +44,6 @@ function App() {
   const [employees, setEmployees] = useState([])
 
   const onNewEmployeeAdded = (employee) => {
-    console.log(employee)
     setEmployees([...employees, employee])
   }
 

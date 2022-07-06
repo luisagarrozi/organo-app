@@ -5,16 +5,6 @@ import SelectList from '../SelectList'
 
 const Form = (props) => {
 
-    const teams = [
-        'Developers',
-        'Front-End',
-        'Data Science',
-        'Devops',
-        'UX and Design',
-        'Mobile',
-        'Management'
-    ]
-
     const [name, setName] = useState('')
     const [role, setRole] = useState('')
     const [photo, setPhoto] = useState('')
@@ -29,6 +19,10 @@ const Form = (props) => {
             photo,
             team
         })
+        setName('')
+        setRole('')
+        setPhoto('')
+        setTeam('')
     }
 
     return (
